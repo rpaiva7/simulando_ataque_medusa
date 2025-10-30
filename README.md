@@ -1,7 +1,7 @@
 
-## Simulando ataques de Brute Force de Senhas com Medusa e Kali Linux
+## Simulando Ataques de Brute Force de Senhas com Medusa e Kali Linux
 
-![warning image](https://imgbox.com/7qqTp43W) 
+![warning image](https://www.sandsteinwandern.de/wandern/wp-content/uploads/2019/11/giphy-hack2.gif) 
 
 ### Neste projeto simulei um ataque de Brute Force de Senhas com Medusa e Kali Linux nos protocolos de rede FTP (transferência de arquivos), HTTP (web) e SMB (compartilhamento de recursos).
 
@@ -19,7 +19,7 @@ Existem diferentes variações do ataque de força bruta, cada uma com uma abord
 
 * Ataque de força bruta reversa: O invasor começa com uma senha conhecida (geralmente obtida em vazamentos de dados anteriores) e tenta associá-la a milhões de nomes de usuário até encontrar a combinação correta.
 
-![gif cadeado](https://user-images.githubusercontent.com/66991901/125233398-44e07d00-e300-11eb-8e77-4d2acd864b30.gif)
+
 
   
 
