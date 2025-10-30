@@ -105,3 +105,43 @@ Onde: -h é o IP do nosso alvo. -U é a lista de usuários descoberta na enumera
 Verifica se teremos acesso como administrador através das credenciais encontradas no ataque anterior.
 
 Comando: smbclient -L //192.168.56.101 -U msfadmin
+
+
+
+Para se proteger de ataques de força bruta, como os executados com ferramentas como o Medusa no Kali Linux, é necessário adotar uma abordagem em camadas que combine políticas de senhas fortes, proteção na camada de rede e sistemas de monitoramento. 
+
+### 1. Fortalecer as políticas de autenticação
+   
+Essa é a primeira e mais importante linha de defesa.
+
+Senhas fortes: Exija senhas longas (mínimo de 14 caracteres), complexas (misturando letras maiúsculas e minúsculas, números e símbolos) e que não sejam baseadas em informações pessoais óbvias.
+
+Autenticação multifator (MFA): Implemente a autenticação de dois ou mais fatores para exigir uma segunda forma de verificação (como um código enviado para o celular) após o uso da senha. Isso torna a descoberta da senha inútil sem o segundo fator.
+
+Limite de tentativas de login: Configure o sistema para bloquear temporariamente um usuário ou endereço IP após um número limitado de tentativas de login incorretas. O Kali Linux, por exemplo, pode ser configurado para essa proteção.
+
+CAPTCHA: Use sistemas CAPTCHA ou reCAPTCHA que exigem uma interação humana para liberar o acesso, impedindo a automação dos ataques. 
+
+### 2. Implementar medidas de segurança na rede
+   
+Essas ações visam proteger a infraestrutura antes que o ataque chegue à autenticação. 
+
+Firewalls: Configure um firewall para detectar e bloquear tráfego de rede suspeito. Um firewall de aplicação web (WAF) pode ser especialmente útil para proteger servidores web.
+
+Monitoramento de IP: Monitore endereços IP que estão tentando acessar o sistema. Se um único IP fizer um número incomum de tentativas de login, ele deve ser automaticamente bloqueado.
+
+Honeypots: Crie "honeypots" — servidores falsos que imitam serviços legítimos. Esses servidores atraem e prendem os invasores, registrando a atividade maliciosa e alertando sobre o ataque, protegendo os sistemas reais.
+
+Alterar portas padrão: Mude a porta padrão de serviços como o SSH (de 22 para outra). Isso não impede o ataque, mas o torna mais difícil para invasores que usam scripts automáticos. 
+
+### 3. Melhorar a segurança do sistema
+   
+Essa etapa envolve práticas de gerenciamento de sistemas para fortalecer a defesa contra ataques internos e externos.
+
+Atualizações regulares: Mantenha todos os sistemas e aplicações atualizados para corrigir vulnerabilidades que poderiam ser exploradas por atacantes.
+
+Remover contas não usadas: Desative ou remova contas de usuários que não são mais necessárias. Isso diminui a superfície de ataque.
+
+Criptografar dados sensíveis: Garanta que os dados armazenados, incluindo as senhas, sejam criptografados para que não sejam acessíveis mesmo em caso de violação.
+
+
